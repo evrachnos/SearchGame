@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-7">
+    <title>Σειριακή Αναζήτηση σε Πίνακα</title>
+    <script src="Search.js"></script>
+    <style type="text/css">
+      canvas 
+      {
+        width: 1000;
+        float: left;
+        height: 400px;
+        border: 1px solid black;
+        border-left: 2px solid blue;
+        border-right: 2px solid blue;
+        border-top: 2px solid blue;
+        border-bottom: 2px solid blue;  
+        background-color : rgba(0, 0, 255, 0.05);   
+        margin-bottom : inherit;                   
+      }
+
+     table 
+     {
+         background : rgba(0,0,250,0.03);
+         border : "0";
+         margin-bottom : inherit;                
+         margin-top : inherit;                         
+     }      
+     
+     body 
+     {
+         background-color : rgba(0,0,250,0.02);
+     }                 
+     
+
+.button 
+{
+   display : inline-block;
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 255, 0.6)), to(rgba(0, 0, 255, 0.8)));
+   background: -webkit-linear-gradient(top, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.8));
+   background: -moz-linear-gradient(top, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.8));
+   background: -ms-linear-gradient(top, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.8));
+   background: -o-linear-gradient(top, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0.8));
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    padding: 2px 8px;   
+   color: white;
+   font-size: 14px;
+   font-weight : bold;   
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   width : 100px;
+   }
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+     
+     
+    </style>
+
+  </head>
+  <body onload = init();>
+    <h2>Παιχνίδι: Βρείτε τον αριθμό</h2>
+
+<canvas id="canvas" width="1000" height="400">Your browser does not support the <code>&lt;canvas&gt;</code>-element. Please think about updating your browser!</canvas>
+
+<center>
+    <form id = "inputForm">
+    <table>
+    <tr>
+            <td><fieldset>
+           <legend> Ταχύτητα Εκτέλεσης </legend>
+            <input id="speedBtn" name="speed" type="range"  min="1" max="10" step="1" value="5" onchange= "onSpeed();" />         
+          </fieldset>    
+          </td>
+        <td> </td>
+        <td><fieldset>
+           <legend> Νέα Προσπάθεια </legend>
+	      <div class="button"  onclick="start(this);">Καθαρισμός</div>	
+        </fieldset>    </td>
+        <td> </td>
+        </tr>
+        </table>
+    </form>
+
+</center>
+
+  </body>
+</html>
